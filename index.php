@@ -110,7 +110,7 @@ function compose_discord_message(array $quiz, string $category_label): string
 		'embeds' => [
 			[
 				'title' => 'Öppna i TSP Quiz',
-				'description' => 'Quiz genererat av https://github.com/tspquiz/discord_hook',
+				'description' => '',
 				'url' => $share_link,
 			],
 		],
