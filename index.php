@@ -62,6 +62,9 @@ function generate_question(array $category_ids, int $n_answers): array
 		'&count=' . urlencode($n_answers) .
 		'&excludeUncommon=1' .
 		'&categories=' . urlencode('[' . implode(',', $category_ids) . ']')), true);
+	if (!is_array($words)) {
+		throw new Exception('Loading words failed');
+	}
 	foreach ($words as $word) {
 		$result['words'][] = $word['id'];
 	}
