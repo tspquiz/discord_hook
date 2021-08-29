@@ -14,7 +14,7 @@ if (php_sapi_name() === 'cli') {
 } else {
 	// HTTP entry point
 	if (!isset($_GET['webhook']) || empty($_GET['webhook'])) {
-		header('400 Bad Request');
+		http_response_code(400);
 		exit('Missing argument webhook');
 	}
 
